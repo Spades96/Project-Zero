@@ -40,22 +40,21 @@ INSERT INTO listings (listing_id, category, user_id) VALUES
 (11, 'Printer', 11),
 (12, 'Webcam', 12);
 
--- products data
+-- listings data
 
--- this table needs to be refactored following changes to listings table
-# INSERT INTO listings (item_id, item_price, listing_id) VALUES
-# (1, 550, 1),
-# (2, 320, 2),
-# (3, 260, 3),
-# (4, 110, 4),
-# (5, 190, 5),
-# (6, 75, 6),
-# (7, 45, 7),
-# (8, 30, 8),
-# (9, 140, 9),
-# (10, 95, 10),
-# (11, 80, 11),
-# (12, 50, 12);
+INSERT INTO listings (listing_id, item_price) VALUES
+(1, 550),
+(2, 320),
+(3, 260),
+(4, 110),
+(5, 190),
+(6, 75),
+(7, 45),
+(8, 30),
+(9, 140),
+(10, 95),
+(11, 80),
+(12, 50);
 
 -- orders data
 
@@ -91,10 +90,9 @@ INSERT INTO reviews (review_id, review_text, user_id) VALUES
 
 -- product price history data
 
--- this table needs to be refactored following the changes to the schema tables
-# INSERT INTO item_price_history (history_id, item_id, old_price, new_price, changed_at) VALUES
-# (1, 1, 600, 550, '2026-04-01 10:15:00'),
-# (2, 2, 350, 320, '2026-04-01 11:00:00'),
-# (3, 3, 280, 260, '2026-04-02 09:30:00'),
-# (4, 5, 210, 190, '2026-04-02 13:45:00'),
-# (5, 9, 160, 140, '2026-04-03 15:20:00');
+INSERT INTO price_history (listing_id, old_price, new_price, change_date) VALUES
+(1, 1, 600, 550, '2026-04-01 10:15:00'),
+(2, 2, 350, 320, '2026-04-01 11:00:00'),
+(3, 3, 280, 260, '2026-04-02 09:30:00'),
+(4, 5, 210, 190, '2026-04-02 13:45:00'),
+(5, 9, 160, 140, '2026-04-03 15:20:00');
