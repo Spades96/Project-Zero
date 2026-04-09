@@ -16,16 +16,11 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS listings (
 	listing_id INT PRIMARY KEY,
 	category VARCHAR(100) NOT NULL,
+    item_name VARCHAR(100) NOT NULL,
+	item_price INT NOT NULL,
+    item_price_history INT,
 	user_id INT NOT NULL,
 	FOREIGN KEY (user_id) REFERENCES users(user_id)
-);
-
-CREATE TABLE IF NOT EXISTS products (
-	product_id INT PRIMARY KEY,	
-	product_price INT NOT NULL,
-    product_price_history INT,
-	listing_id INT NOT NULL,
-	FOREIGN KEY (listing_id) REFERENCES listings(listing_id)
 );
 
 CREATE TABLE IF NOT EXISTS orders (
