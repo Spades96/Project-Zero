@@ -1,5 +1,5 @@
 01_table_setup.sql
--Table creation and procedures
+-Table creation
 
 02_data.sql
 -Data insertion logic
