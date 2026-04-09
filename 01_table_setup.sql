@@ -1,3 +1,7 @@
+DROP SCHEMA IF EXISTS project_zero;
+CREATE SCHEMA project_zero;
+USE project_zero;
+
 CREATE TABLE IF NOT EXISTS universities (
 	university_id INT PRIMARY KEY,
 	university_name VARCHAR(100) UNIQUE NOT NULL
