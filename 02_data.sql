@@ -26,19 +26,19 @@ INSERT INTO users (user_id, user_name, first_name, last_name, university_id, rev
 
 -- listing data
 
-INSERT INTO listings (listing_id, category, user_id) VALUES
-(1, 'Laptop', 1),
-(2, 'Phone', 2),
-(3, 'Tablet', 3),
-(4, 'Headphones', 4),
-(5, 'Monitor', 5),
-(6, 'Calculator', 6),
-(7, 'Keyboard', 7),
-(8, 'Mouse', 8),
-(9, 'Smartwatch', 9),
-(10, 'Speaker', 10),
-(11, 'Printer', 11),
-(12, 'Webcam', 12);
+INSERT INTO listings (listing_id, category, item_name, user_id) VALUES
+(1, 'Computers', 'Laptop', 1),
+(2, 'Electronics', 'Phone', 2),
+(3, 'Electronics', 'Tablet', 3),
+(4, 'Audio', 'Headphones', 4),
+(5, 'Computers', 'Monitor', 5),
+(6, 'School Supplies', 'Calculator', 6),
+(7, 'Accessories', 'Keyboard', 7),
+(8, 'Accessories', 'Mouse', 8),
+(9, 'Wearables', 'Smartwatch', 9),
+(10, 'Audio', 'Speaker', 10),
+(11, 'Printers', 'Printer', 11),
+(12, 'Accessories', 'Webcam', 12);
 
 -- listings data
 
