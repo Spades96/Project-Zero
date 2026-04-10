@@ -3,7 +3,7 @@ FROM users u
 JOIN listings l
 ON u.user_id=l.user_id;
 
-SELECT MIN(l.item_price) AS "minimum listing",MAX(l.item_price) AS "maximum listing",ROUND(AVG(l.item_price),2) AS "average listing price"
+SELECT MIN(l.item_price) AS "minimum listing",MAX(l.item_price) AS "maximum listing",ROUND(AVG(l.item_price),2) AS "average listing item_price"
 FROM listings l;
 
 SELECT 
