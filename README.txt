@@ -1,5 +1,5 @@
 01_table_setup.sql
--Table creation
+-Schema creation and table setup
 
 02_data.sql
 -Data insertion logic
@@ -8,4 +8,4 @@
 -Queries that demonstrate database functionality
 
 04_automation.sql
--Database automation and enforcement of business rules
+-Database automation with triggers, procedure, and a function for enforcement of business rules
