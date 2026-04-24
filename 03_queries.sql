@@ -37,3 +37,32 @@ WHERE l.item_price > 100;
 -- Count the number of users who have made at least one order
 SELECT COUNT(DISTINCT o.user_id) AS "users with orders"
 FROM orders o;
+
+-- Show off  the review count trigger, which updates the review_count column when a new review is added --
+SELECT user_id, user_name, review_count
+FROM users;
+
+INSERT INTO reviews (review_id, rating,review_text, user_id) 
+VALUES (13, 5, 'Great product!', 1);
+
+SELECT user_id, user_name, review_count
+FROM users;
+
+-- Show off the price history trigger, which logs price changes for listings --
+SELECT listing_id, item_name, item_price
+FROM listings;
+
+UPDATE listings
+SET item_price = 600
+WHERE listing_id = 1;
+
+SELECT old_price, new_price, change_date, listing_id
+FROM price_history
+WHERE listing_id = 1;
+
+-- Tests the trigger for deleting a listing with an item in it , which should return an error --
+DELETE FROM listings
+WHERE listing_id = 1;
+
+-- Tests the procedure for placing an order for a user that does not exist, which should return an error --
+CALL place_order(999, 13, 1);
