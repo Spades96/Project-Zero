@@ -38,6 +38,10 @@ WHERE l.item_price > 100;
 SELECT COUNT(DISTINCT o.user_id) AS "users with orders"
 FROM orders o;
 
+--Creates listings using the get_total_item_value function --
+SELECT l.listing_id, l.item_name, l.item_price,get_total_item_value(l.listing_id) AS total_value
+FROM listings l;
+
 -- Show off  the review count trigger, which updates the review_count column when a new review is added --
 SELECT user_id, user_name, review_count
 FROM users;
