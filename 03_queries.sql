@@ -38,7 +38,7 @@ WHERE l.item_price > 100;
 SELECT COUNT(DISTINCT o.user_id) AS "users with orders"
 FROM orders o;
 
---Creates listings using the get_total_item_value function --
+-- Creates listings using the get_total_item_value function --
 SELECT l.listing_id, l.item_name, l.item_price,get_total_item_value(l.listing_id) AS total_value
 FROM listings l;
 
@@ -47,7 +47,7 @@ SELECT user_id, user_name, review_count
 FROM users;
 
 INSERT INTO reviews (review_id, rating,review_text, user_id) 
-VALUES (13, 5, 'Great product!', 1);
+VALUES (25, 5, 'Great product!', 1);
 
 SELECT user_id, user_name, review_count
 FROM users;
